@@ -1,0 +1,12 @@
+services:
+  battery:
+    image: pi-battery
+    platform: linux/arm64/v8
+    build: .
+    privileged: true
+    restart: always
+    devices:
+      - /dev:/dev
+      - /media:/media
+    volumes:
+      - /tmp:/tmp
